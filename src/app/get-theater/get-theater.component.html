@@ -1,0 +1,33 @@
+<<h2>Theater Details</h2> 
+
+<hr/>
+
+<div class="form-group">
+  <label for="name">Theater Id</label>
+  <input type="text" class="form-control" id="theaterId" required [(ngModel)]="Theater.theaterId" name="theaterId">
+  <br>
+  <br>
+  <button (click)="getTheater(Theater.theaterId)" class="btn btn-danger">Search</button>
+</div>
+<div class="panel-body">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>theaterId</th>
+        <th>theaterName</th>
+        <th>theaterCity</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let the of theater | async">
+        <td>{{the.theaterId}}</td>
+        <td>{{the.theaterName}}</td>
+        <td>{{the.theaterCity}}</td>
+        
+        
+</tr>
+</tbody>
+</table>
+</div>

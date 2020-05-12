@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+<div class="panel-heading">
+  <h2>Theater List</h2>
+</div>
+<div class="panel-body">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>theaterId</th>
+        <th>theaterName</th>
+        <th>theaterArea</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let the of theaters | async">
+        
+        <td>{{the.theaterId}}</td>
+        <td>{{the.theaterName}}</td>
+        <td>{{the.theaterArea}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
